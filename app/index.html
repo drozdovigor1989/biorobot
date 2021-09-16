@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="container">
+      <div class="header__box">
+        <div class="header__logo">
+          <img class="header__logo-img" src="images/header-logo.svg" alt="logo">
+        </div>
+        <button class="header__modal-btn header__modal-btn ">Произвести биоробота</button>
+      </div>
+    </div>
+  </header>
+
+  <section class="production section">
+    <div class="container">
+      <div class="production__box section__inner">
+        <div class="production__box-text">
+          <h1 class="production__title">
+            Фабрика по производству биороботов
+          </h1>
+          <p class="production__subtitle">класса «монитор-кресло»</p>
+        </div>
+        <div class="production__box-img">
+          <img src="images/production-robots.png" alt="robots">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="wallet">
+    <div class="container">
+      <div class="section__inner">
+        <h3 class="section__title ">Кошелек криптовалют</h3>
+
+        <div class="personal__box-item-head">
+          <div class="personal__box-item-name">Graphic Design</div>
+          <div class="personal__box-item-number">80%</div>
+        </div>
+        <div class="personal__box-item-line">
+          <span style="max-width: 80%;"></span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="instock parts-section">
+    <div class="container">
+      <div class="section__inner">
+        <h3 class="section__title ">
+          Рынок комплектующих
+        </h3>
+
+        <div class="parts-section__items">
+          <div class="parts-section__item">
+            <div class="parts-section__item-img">
+              <img src="images/parts-item1.svg" alt="">
+            </div>
+            <div class="parts-section__item-inner">
+              <h5 class="parts-section__item-title">Биомеханизм</h5>
+              <div class="parts-section__item-price">Стоимость:
+                <span class="purchase-value">7</span> монет
+              </div>
+              <button class="parts-section__item-btn">Установить</button>
+            </div>
+          </div>
+          <div class="parts-section__item">
+            <div class="parts-section__item-img">
+              <img src="images/parts-item2.svg" alt="">
+            </div>
+            <div class="parts-section__item-inner">
+              <h5 class="parts-section__item-title">Процессор</h5>
+              <div class="parts-section__item-price">Стоимость:
+                <span class="purchase-value">5</span> монет
+              </div>
+              <button class="parts-section__item-btn">Установить</button>
+            </div>
+          </div>
+          <div class="parts-section__item">
+            <div class="parts-section__item-img">
+              <img src="images/parts-item3.svg" alt="">
+            </div>
+            <div class="parts-section__item-inner">
+              <h5 class="parts-section__item-title">Душа</h5>
+              <div class="parts-section__item-price">Стоимость:
+                <span class="purchase-value">25</span>монет
+              </div>
+              <button class="parts-section__item-btn " disabled>Установить</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </section>
+
+  <section class="storage parts-section">
+    <div class="container">
+      <div class="section__inner">
+
+        <h3 class="section__title ">Склад</h3>
+
+        <div class="parts-section__items">
+
+          <div class="parts-section__item">
+            <h5 class="parts-section__item-title">Биомеханизм</h5>
+            <div class="parts-section__item-price">Стоимость:
+              <span class="selling-price">5</span> монет
+            </div>
+            <div class="amount">
+              <span class="number">2</span>
+              шт</div>
+            <button class="parts-section__item-btn">Продать</button>
+          </div>
+
+          <div class="parts-section__item">
+            <h5 class="parts-section__item-title">Процессор</h5>
+            <div class="parts-section__item-price">Стоимость:
+              <span class="selling-price">5</span>монет
+            </div>
+            <div class="amount">
+              <span class="number">3</span> шт</div>
+            <button class="parts-section__item-btn">Продать</button>
+          </div>
+
+          <div class="parts-section__item">
+            <h5 class="parts-section__item-title">Душа</h5>
+            <div class="parts-section__item-price">Стоимость:
+              <span class="selling-price">15</span> монет
+            </div>
+            <div class="amount">
+              <span class="number">0</span> шт</div>
+            <button class="parts-section__item-btn " disabled>Продать</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="create">
+    <div class="container">
+      <div class="section__inner">
+        <h3 class="section__title ">Производство</h3>
+        <div class="create-grid__box">
+        <form class="create__form">
+          <fieldset>
+            <p class="form-create__legend">Тип биоробота:</p>
+            <div class="form-create__box">
+              <label class="form-create__label">
+                <input class="form-create__radio" type="radio" id="frontend" name="type" value="frontend" checked>
+                <span class="form-create__radio-style"></span>
+                FrontEnd</label>
+              <label class="form-create__label">
+                <input class="form-create__radio" type="radio" id="design" name="type" value="design">
+                <span class="form-create__radio-style"></span>
+                Design</label>
+            </div>
+          </fieldset>
+          <fieldset>
+            <p class="form-create__legend">Стабилизатор:</p>
+            <div class="form-create__box">
+              <label class="form-create__label">
+                <input class="form-create__radio" type="radio" id="male" name="gender" value="male" checked>
+                <span class="form-create__radio-style"></span>
+                Male</label>
+              <label class="form-create__label">
+                <input class="form-create__radio" type="radio" id="female" name="gender" value="female">
+                <span class="form-create__radio-style"></span>
+                Female</label>
+            </div>
+          </fieldset>
+        </form>
+        <div class="create-parts__box">
+          <div class="create-parts__line">
+            <div class="create-parts__image biomech--active"></div>
+            <div class="create-parts__image biomech--active"></div>
+            <div class="create-parts__image biomech"></div>
+            <div class="create-parts__image biomech--disable"></div>
+           
+          </div>
+          <div class="create-parts__line">
+            <div class="create-parts__image processor--active"></div>
+            <div class="create-parts__image processor"></div>
+            <div class="create-parts__image processor--disable"></div>
+            <div class="create-parts__image processor--disable"></div>
+          </div>
+          <div class="create-parts__line">
+          <div class="create-parts__image soul"></div> 
+        </div>
+        </div>
+        <div class="robot__img"></div>
+        <div class="create-robot__btn-box">
+          <button class="create-robot__btn" type="submit">Произвести за 10 монет</button>
+        </div>
+        <p class="create-robot__text">
+          Для производства биоробота не хватает 2 биомеханизма,
+3 процессора и души
+        </p>
+      </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <script src="js/main.min.js"></script>
+</body>
+
+</html>
