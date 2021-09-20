@@ -40,7 +40,6 @@ function images() {
 
 function scripts() {
   return src([
-    'node_modules/jquery/dist/jquery.js',
     'app/js/main.js'
   ])
     .pipe(concat('main.min.js'))
@@ -65,7 +64,6 @@ function styles() {
 function build() {
   return src([
     'app/css/style.min.css',
-    'app/fonts/**/*',
     'app/js/main.min.js',
     'app/*.html'
   ], {base: 'app'})
