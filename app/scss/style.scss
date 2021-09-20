@@ -1,7 +1,5 @@
 @import 'vars';
-@import 'fonts';
 @import 'reset';
-@import 'libs';
 @import 'global';
 
 
@@ -27,28 +25,29 @@
   }
 
   &__modal-btn {
-    font-size: 16px;
-    line-height: 1.5;
+    @extend %font16;
     font-weight: 600;
     padding: 12px;
-    border: 2px solid #FF7F22;
+    border: 2px solid $light-orange;
     border-radius: 60px;
     background-color: transparent;
     color: #fff;
 
     &:hover {
-      background: #FF5722;
-      border: 2px solid #FF5722;
+      background: $orange;
+      ;
+      border: 2px solid $orange;
+      ;
     }
 
     &:active {
-      background: #FF7F22;
-      border: 2px solid #FF7F22;
+      background: $light-orange;
+      border: 2px solid $light-orange;
     }
 
     &:disabled {
-      color: #4C5865;
-      border: 2px solid #4C5865;
+      color: $gray;
+      border: 2px solid $gray;
       background: transparent;
       pointer-events: none;
     }
@@ -67,18 +66,20 @@
 
   &__box-img {
     margin-left: 50px;
+    width: 366px;
+    height: 320px;
+
   }
 
   &__title {
     max-width: 470px;
-    font-size: 56px;
-    line-height: 1.28
+    @include adaptive_font-h1;
+
   }
 
   &__subtitle {
-    font-size: 24px;
-    line-height: 1.33;
-    color: #A3B8CC;
+    @extend %font24;
+    color: $pirple;
     margin-top: 24px;
   }
 }
@@ -104,10 +105,9 @@
   }
 
   &__coins-info {
-    font-size: 24px;
-    line-height: 1;
+    @extend %font24;
     margin-bottom: 44px;
-    color: #A3B8CC;
+    color: $pirple;
   }
 
   &__coins-number {
@@ -116,6 +116,11 @@
 
   &__coins-biorobo {
     display: inline-block;
+    font-weight: 500;
+  }
+
+  &__coins-currency {
+    font-weight: 500;
   }
 
   &__coins-form {
@@ -126,16 +131,14 @@
     padding: 0;
     background: transparent;
     border: none;
-    color: #FF7F22;
-    font-size: 16px;
-    line-height: 1.5;
+    color: $light-orange;
+    @extend %font16;
     position: relative;
-    border-bottom: 1px solid rgba(#FF7F22, 0.5);
+    border-bottom: 1px solid rgba($light-orange, 0.5);
   }
 
   &__coins-label {
-    font-size: 16px;
-    line-height: 1.5;
+    @extend %font16;
     margin-left: 50px;
   }
 
@@ -162,36 +165,44 @@
         transform: translate(-50%, -50%);
       }
     }
+
+    &:hover+.wallet__coins-check-style {
+      border: 2px solid $gray;
+    }
+
+    &:disabled+.wallet__coins-check-style {
+      border: 2px solid #333940;
+    }
   }
 
   &__coins-check-style {
     position: absolute;
     width: 24px;
     height: 24px;
-    border: 2px solid #A3B8CC;
+    border: 2px solid $pirple;
     margin-left: -36px;
     cursor: pointer;
+
   }
-
 }
-
 
 .instock {
   .parts-section__item-btn {
     color: #fff;
-    background: linear-gradient(180deg, #FF7F22 0%, #FF5722 100%);
+    background: linear-gradient(180deg, $light-orange 0%, $orange 100%);
     filter: drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.16));
 
     &:hover {
-      background: #FF5722;
+      background: $orange;
+      ;
     }
 
     &:active {
-      background: #FF7F22;
+      background: $light-orange;
     }
 
     &:disabled {
-      background: #4C5865;
+      background: $gray;
       color: #7D90A6;
       pointer-events: none;
     }
@@ -216,21 +227,17 @@
   margin-bottom: 45px;
 
   img {
-    width: 100%;
+    width: 236px;
   }
 }
 
-.parts-section__item-title {
-  font-size: 20px;
-  line-height: 1.6;
-}
+
 
 .parts-section__item-price {
+  @extend %font16;
   margin: 5px 0 34px;
   font-weight: 500;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #A3B8CC;
+  color: $pirple;
 }
 
 .storage {
@@ -244,26 +251,26 @@
   }
 
   .parts-section__item-btn {
-    color: #7CDAF9;
+    color: $blue;
     background-color: transparent;
-    border: 2px solid #7CDAF9;
+    border: 2px solid $blue;
     filter: drop-shadow(0px 2px 4px rgba(0, 0, 0, 0.25));
 
     &:hover {
-      background: #7CDAF9;
+      background: $blue;
       color: #212529;
       filter: drop-shadow(0px 10px 40px #1E5466);
     }
 
     &:active {
-      color: #7CDAF9;
+      color: $blue;
       background-color: transparent;
       border-color: #22B3E3;
     }
 
     &:disabled {
-      border: 2px solid #4C5865;
-      color: #4C5865;
+      border: 2px solid $gray;
+      color: $gray;
       background-color: transparent;
       pointer-events: none;
     }
@@ -292,9 +299,8 @@
   }
 
   .form-create__legend {
+    @extend %font14;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.42;
   }
 
   .form-create__box {
@@ -319,7 +325,7 @@
         width: 16px;
         height: 16px;
         border-radius: 50%;
-        background: #FF7F22;
+        background: $light-orange;
         position: absolute;
         top: 50%;
         left: 50%;
@@ -332,7 +338,7 @@
     position: absolute;
     width: 24px;
     height: 24px;
-    border: 2px solid #A3B8CC;
+    border: 2px solid $pirple;
     border-radius: 50%;
     margin-left: -36px;
     cursor: pointer;
@@ -403,14 +409,70 @@
     background: url('../images/robotparts-sprites.png') -146px -78px;
   }
 
-  .robot__img {
-    width: 236px;
-    height: 320px;
+  .robot__img-box {
+
     grid-row-start: 1;
     grid-column-start: 3;
     grid-row-end: 3;
     grid-column-end: 4;
   }
+
+  .robot__img {
+    width: 236px;
+    height: 320px;
+    background-image: url('../images/robots-sprites.png');
+
+    &.created-male1 {
+      background-position: -522px -10px;
+    }
+
+    &.created-male2 {
+      background-position: -10px -350px;
+    }
+
+    &.created-female1 {
+      background-position: -10px -10px;
+      ;
+    }
+
+    &.created-female2 {
+      background-position: -266px -10px;
+    }
+
+    &.granted-male1 {
+      background-position: -778px -10px;
+    }
+
+    &.granted-male2 {
+      background-position: -778px -350px;
+    }
+
+    &.granted-female1 {
+      background-position: -266px -350px;
+    }
+
+    &.granted-female2 {
+      background-position: -522px -350px;
+    }
+
+    &.impossibly-male1 {
+      background-position: -522px -690px;
+    }
+
+    &.impossibly-male2 {
+      background-position: -778px -690px;
+    }
+
+    &.impossibly-female1 {
+      background-position: -10px -690px;
+    }
+
+    &.impossibly-female2 {
+      background-position: -266px -690px;
+    }
+  }
+
+
 
   .create-robot__btn-box {
     grid-row-start: 2;
@@ -421,15 +483,14 @@
   }
 
   .create-robot__btn {
+    @extend %font14;
     width: 236px;
     height: 48px;
-    font-size: 14px;
-    line-height: 1.71;
     font-weight: 500;
-    border: 2px solid #4C5865;
+    border: 2px solid $gray;
     background-color: transparent;
     border-radius: 60px;
-    color: #4C5865;
+    color: $gray;
   }
 
   .create-robot__text {
@@ -437,12 +498,13 @@
     grid-column-start: 2;
     grid-row-end: 3;
     grid-column-end: 3;
-
+    @extend %font12;
     max-width: 200px;
     font-weight: 500;
-    font-size: 12px;
-    line-height: 1.33;
-    color: #A3B8CC;
+    color: $pirple;
   }
 
 }
+
+
+@import 'media';

@@ -1,0 +1,76 @@
+$light-orange: #FF7F22;
+$orange: #FF5722;
+$pirple:#A3B8CC;
+$gray:#4C5865;
+$blue: #7CDAF9;
+
+
+
+%font24 {
+    font-size: 24px;
+    line-height: 1.33;
+}
+
+%font20 {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+%font16 {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+%font14 {
+    font-size: 14px;
+    line-height: 1.42;
+}
+
+%font12 {
+    font-size: 12px;
+    line-height: 1.33;
+}
+
+
+
+@mixin adaptive_font-h1 {
+    font-size: 56px;
+    line-height: 1.28;
+
+    @media (max-width: 1919px) {
+        font-size: 48px;
+        line-height: 1.16;
+    }
+
+    @media (max-width: 1023px) {
+        font-size: 32px;
+        line-height: 1.25;
+    }
+
+    @media (max-width: 767px) {
+        font-size: 28px;
+        line-height: 1.14;
+    }
+
+}
+
+
+@mixin adaptive_font-h2 {
+    font-size: 32px;
+    line-height: 1.28;
+
+    @media (max-width: 1919px) {
+        font-size: 24px;
+        line-height: 1.33;
+    }
+}
+
+@mixin info-text {
+    font-size: 20px;
+    line-height: 1.6;
+
+    @media (max-width: 1919px) {
+        font-size: 18px;
+        line-height: 1.33;
+    }
+}

@@ -1,4 +1,4 @@
-$(function () {
+
 
 const modalOpen = document.querySelector('.header__modal-btn'),
         overlay = document.querySelector('.overlay'),
@@ -18,4 +18,3 @@ const modalOpen = document.querySelector('.header__modal-btn'),
      }
 
 
-})

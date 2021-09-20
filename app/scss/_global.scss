@@ -5,6 +5,12 @@ body {
 	background: radial-gradient(82.33% 70.44% at 50% 0%, #26394D 0%, #212529 100%);
 }
 
+h1,
+h2,
+h3 {
+	font-weight: 500;
+}
+
 button,
 a {
 	cursor: pointer;
@@ -18,19 +24,19 @@ fieldset {
 }
 
 .container {
-	max-width: 1060px;
+	max-width: 1056px;
 	margin: 0 auto;
+	padding: 0 20px;
 }
 
 .section__inner {
-
 	padding-left: 130px;
 }
 
 .section__title {
-	font-size: 32px;
-	line-height: 1.25;
-	margin-bottom: 60px;
+	@include adaptive_font-h2;
+	margin: 0 auto 40px;
+
 }
 
 .parts-section__item-btn {
@@ -53,6 +59,10 @@ fieldset {
 	margin-top: 100px;
 }
 
+.modal__message-info,
+.parts-section__item-title {
+	@include info-text;
+}
 
 .overlay {
 	opacity: 0;
@@ -65,6 +75,7 @@ fieldset {
 	background-color: rgba(#1A1A1A, .67);
 	z-index: 20;
 	transition: .3s all;
+
 	&.overlay--active {
 		opacity: 1;
 		visibility: visible;
@@ -83,7 +94,8 @@ fieldset {
 	background: #FFFFFF;
 	border-radius: 10px;
 	z-index: 1000;
-	&.modal--active{
+
+	&.modal--active {
 		display: block;
 	}
 
@@ -106,32 +118,37 @@ fieldset {
 		margin: 33px 70px 40px 130px;
 	}
 
-	&__message {
-		color: #212529;
-		font-size: 32px;
-		line-height: 1.25;
-		position: relative;
-		
+	.message-created {
+		margin: 30px 10px;
 	}
-	.message-fail{
-		&::before{
+
+	&__message {
+		@include adaptive_font-h2;
+		color: #212529;
+		position: relative;
+	}
+
+	.message-fail {
+		display: block;
+
+		&::before {
 			content: "";
 			position: absolute;
 			width: 43px;
 			height: 52px;
-			left: -69px;
-			top: 15px;
-			background-image:url('../images/coin-big.png');
-			background-position:center;
-			background-repeat:no-repeat;
-			background-size:cover;
+			left: 57px;
+			top: 48px;
+			background-image: url('../images/coin-big.png');
+			background-position: center;
+			background-repeat: no-repeat;
+			background-size: cover;
 		}
 	}
 
 	&__message-info {
+		@extend %font20;
 		color: #4C5865;
-		font-size: 20px;
-		line-height: 1.6;
 		margin-top: 23px;
+
 	}
 }
